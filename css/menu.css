@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F4F8;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed; /* Tetap di tempat saat menggulir */
+    top: 0; /* Jarak dari atas */
+    left: 0; /* Jarak dari kiri */
+    width: 20%; /* Lebar sidebar */
+    height: 100%; /* Tinggi penuh */
+    background-color: #D3D3D3; /* Warna latar belakang */
+    padding: 20px; /* Padding dalam sidebar */
+    box-sizing: border-box; /* Menghitung padding dalam lebar */
+    overflow-y: auto; /* Scroll jika konten melebihi tinggi */
+}
+
+.sidebar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    align-self: flex-start;
+}
+
+.sidebar .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Jarak atas dari logo */
+    width: 100%;
+}
+
+.sidebar-button {
+    margin: 10px; /* Menambahkan margin untuk jarak antar tombol */
+    display: block; /* Mengatur tombol menjadi block agar lebih mudah diatur */
+    text-align: center; /* Mengatur teks di tengah */
+}
+
+.menu-item {
+    padding: 10px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Mengisi lebar penuh */
+    text-align: left; /* Teks rata kiri */
+    margin-bottom: 10px; /* Jarak antar button */
+    border-radius: 4px; /* Sudut melengkung untuk tampilan yang lebih modern */
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efek hover */
+}
+.menu-item.active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    overflow-y: auto; /* Scroll jika konten melebihi tinggi */
+    margin-top: 80px; /* Menambahkan margin atas untuk menghindari tumpang tindih dengan header */
+    margin-left: 20%; /* Menambahkan margin kiri untuk menghindari tumpang tindih dengan sidebar */
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+}
+
+.header {
+    position: fixed; /* Tetap di tempat saat menggulir */
+    top: 0; /* Jarak dari atas */
+    left: 20%; /* Jarak dari kiri (sesuaikan dengan lebar sidebar) */
+    width: 78%; /* Lebar sesuai dengan konten utama */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Warna latar belakang header */
+    color: #fff; /* Warna teks di header */
+    padding: 10px 20px; /* Padding di header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk header */
+    z-index: 100;
+}
+
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center; /* Memastikan teks di tengah */
+    flex-grow: 1; /* Mengizinkan h2 untuk mengambil ruang yang tersedia */
+}
+
+.header .profile-icon {
+    font-size: 24px;
+    color: #FF00FF;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content h3 {
+    color: #800080;
+    font-size: 24px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+}
+
+.logo-container img {
+    margin-right: 10px; /* Adds space between the logo and text */
+}
+
+/* Gaya untuk kotak pencarian */
+.search-box {
+    padding: 8px; /* Padding di dalam kotak pencarian */
+    border: 1px solid #ccc; /* Border abu-abu terang */
+    border-radius: 4px; /* Sudut melengkung */
+    background-color: white; /* Warna latar belakang kotak pencarian */
+    color: black; /* Warna teks dalam kotak pencarian */
+    width: 50px; /* Lebar kotak pencarian, sesuaikan dengan ukuran yang diinginkan */
+    box-shadow: none; /* Menghilangkan bayangan untuk kotak pencarian */
+    transition: border-color 0.3s; /* Transisi saat hover */
+}
+
+.header .search-box {
+    width: 200px; /* Atur lebar sesuai kebutuhan */
+}
+/* Gaya saat kotak pencarian fokus */
+.search-box:focus {
+    border-color: #A300BD; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.profile-icon {
+    font-size: 24px;
+    color: #FF00FF;
+}
+
+.menu-row {
+    padding: 10px;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.5); /* Garis pemisah modern abu-abu */
+    display: flex;
+    justify-content: space-between; /* Mengatur agar elemen terdistribusi merata */
+}
+
+.btn-pesan {
+    background-color: #A300BD; /* Warna ungu solid */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    padding: 8px 12px; /* Padding untuk tombol */
+    border-radius: 4px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor pointer saat hover */
+    transition: background-color 0.3s; /* Transisi saat hover */
+    display: flex; /* Menjadikan tombol sebagai flex container */
+    align-items: center; /* Vertically center the content */
+}
+
+img {
+    width: 20px; /* Atur lebar gambar */
+    height: 20px; /* Atur tinggi gambar */
+    margin-left: 8px; /* Jarak antara tombol dan gambar */
+}
+.btn-pesan:hover {
+    background-color: #6a006a; /* Warna lebih gelap saat hover */
+}
+
+.separator {
+    position: fixed; /* Tetap di tempat saat menggulir */
+    top: 40px; /* Sesuaikan dengan tinggi header */
+    left: 20%; /* Jarak dari kiri (sesuaikan dengan lebar sidebar) */
+    width: 80%; /* Lebar sesuai dengan konten utama */
+    height: 2px; /* Tinggi separator */
+    background-color: transparent; /* Mengatur latar belakang menjadi transparan */
+    border-top: 60px solid #F0F4F8; /* Menambahkan border atas */
+    z-index: 98; /* Pastikan separator berada di depan konten lainnya */
+}
+
+.btn-pesan {
+    background-color: #A300BD; /* Warna ungu solid */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    padding: 8px 12px; /* Padding untuk tombol */
+    border-radius: 4px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor pointer saat hover */
+    transition: background-color 0.3s; /* Transisi saat hover */
+    position: sticky; /* Membuat posisi tetap saat menggulir */
+    top: 0; /* Menempatkan tombol di bagian atas konten */
+    z-index: 10; /* Pastikan tombol berada di depan */
+    margin-top: 15px;
+}
+
+.btn-pesan:hover {
+    background-color: #8E00A3; /* Warna lebih gelap saat hover */
+    
+}
+
+.menu-content {
+    margin-top: 8px; /* Jarak antara tombol pesan dan tabel */
+
+    
+}
+
+.icon-tambah {
+    width: 40px; /* Ubah sesuai ukuran yang diinginkan */
+    height: 40px; /* Ubah sesuai ukuran yang diinginkan */
+}
+
